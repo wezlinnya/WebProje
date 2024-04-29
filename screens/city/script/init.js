@@ -1,8 +1,8 @@
 
-const p0 = "Köklü geçmişi ile tarih ve kültür kenti; Büyük Cihan Devleti Osmanlı’nın ilk başkenti Bursa… Birçok uygarlığı bağrına basmış bir anne…";
-const p1 = "Bursa Teleferik, Türkiye'nin ilk teleferik hattıdır. 29 Ekim 1963'te açılmıştır. Bursa'nınşehir simgelerinden biri olan Bursa Teleferik aynı zamanda halatlı taşımacılık alanında 9 kmyatay uzunluğu ile Türkiye'nin en uzun teleferik hattıdır.";
-const p2 = "Bursa'nın Mustafakemalpaşa ilçesi sınırları içindedir ve ilçe merkezine 17 km uzaklıktadır.Bir fay hattının çökmesi sonucu oluşan Şelale, 38 metre yükseklikten dökülmektedir. Mesireve piknik alanı da bulunan Suuçtu Şelalesi, etrafını saran Kayın ağaçları ve serin havasıile tam bir oksijen deposudur.";
-const p3 = "Cumalıkızık, Türkiye'nin Bursa ilinin Yıldırım ilçesine bağlı bir mahalledir. Bursa şehirmerkezine 11 kilometredir. Ortalama 20 dakikada ulaşım sağlanır. Uludağ'ın kuzey eteklerindekurulmuş ve hâlen yaşayan beş Kızık köyünden biridir.";
+const p0 = "Aksaray, mistik Ihlara Vadisi'nden tarihi Selçuk ve Osmanlı eserlerine, bereketli tarım alanlarından eşsiz doğal güzelliklerine kadar her köşesiyle benzersiz bir Anadolu şehri, keşfedilmeyi bekleyen bir hazine.";
+const p1 = "Kapadokya, benzersiz peri bacaları, tarih kokan yeraltı şehirleri, nefes kesici balon manzaraları ve mistik atmosferiyle dünyanın en büyüleyici doğal ve kültürel miraslarından biri.";
+const p2 = "Eğri Minare, tarihi dokusuyla Anadolu'nun eşsiz mimari miraslarından biri olarak, Seljuk döneminden günümüze taşıdığı zarafet ve estetikle Konya'nın simgesi haline gelmiş bir başyapıt.";
+const p3 = "Ihlara Vadisi, mistik atmosferi, tarihi manastır kompleksleri ve doğal güzellikleriyle, zamanın unuttuğu bir dünya gibi, ruhu dinlendiren ve hayranlık uyandıran eşsiz bir doğa harikası.";
 const h0 = 'Aksaray';
 const h1 = 'Kapadokya';
 const h2 = 'Eğri Minare';
