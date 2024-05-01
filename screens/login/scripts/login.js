@@ -1,6 +1,6 @@
 const auth = {
-    username: 'g231210040',
-    password: '12345',
+    username: 'ad',
+    password: '1',
 }
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
