@@ -1,10 +1,10 @@
 <?php
-$name = $_GET['name'];
-$surname = $_GET['surname'];
-$email = $_GET['email'];
-$age = $_GET['age'];
-$gender = $_GET['gender'];
-$message = $_GET['message'];
+$name = $_POST['name'];
+$surname = $_POST['surname'];
+$email = $_POST['email'];
+$age = $_POST['age'];
+$gender = $_POST['gender'];
+$message = $_POST['message'];
 ?>
 
 <!DOCTYPE html>
