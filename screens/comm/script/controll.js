@@ -47,16 +47,17 @@ new Vue({
                 throw new Error("mesaj: 200 karakterden fazla mesajları kabul etmem.");
         },
         redirect() {
-            window.location.href = 'comm.php' +
-                '?name=' + encodeURIComponent(this.formData.name) +
-                '&surname=' + encodeURIComponent(this.formData.surname) +
-                '&email=' + encodeURIComponent(this.formData.email) +
-                '&age=' + encodeURIComponent(this.formData.age) +
-                '&gender=' + encodeURIComponent(this.formData.gender) +
-                '&message=' + encodeURIComponent(this.formData.message);
+            const formData = {
+                name: document.getElementById('name').value,
+                surname: document.getElementById('surname').value,
+                email: document.getElementById('email').value,
+                age: document.getElementById('age').value,
+                gender: document.querySelector('input[name="gender"]:checked').value,
+                message: document.getElementById('message').value
+            };
         },
-        submitForm() {
-
+        submitForm(event) {
+            event.preventDefault();  // Formun otomatik olarak gönderilmesini durdur
             try {
                 this.nameCheck();
                 this.surnameCheck();
@@ -65,16 +66,17 @@ new Vue({
                 this.genderCheck();
                 this.messageCheck();
 
-
                 console.log('Form gönderildi!');
                 //console.log(this.formData);
                 alert('Yönlendiriliyorsun');
                 this.redirect();
+                document.getElementById('myform').submit();  // Doğrulama başarılı olduğunda formu gönder
+                // Doğrulama başarılıysa true döner ve form gönderilir
+                return true;
             } catch (error) {
-                alert(error);
+                alert("An error occurred: " + error);
+                return false;  // Doğrulama başarısız olduğunda formu gönderme
             }
-
-
         },
         resetForm() {
             // Formu temizle
