@@ -17,6 +17,6 @@ function submit(event) {
 }
 
 function redirect() {
-    alert("Giriş Başarılı. Hoşgeldiniz ", auth.username);
+    alert("Giriş Başarılı. Hoşgeldiniz " + usernameInput.value);
     window.location.href = "../about/about.html";
 }
