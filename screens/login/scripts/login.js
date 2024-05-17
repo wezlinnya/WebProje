@@ -1,6 +1,6 @@
 const auth = {
-    username: 'ad',
-    password: '1',
+    username: 'g231210040@sakarya.edu.tr',
+    password: 'g231210040',
 }
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
