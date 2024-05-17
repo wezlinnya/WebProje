@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim Formu</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 200;">
@@ -49,41 +48,100 @@
                 <label for="name">İsim:</label>
                 <input type="text" id="name" name = "name" v-model="formData.name" class="form-control">
             </div>
+
             <div class="form-group">
                 <label for="surname">Soyadı:</label>
                 <input type="text" id="surname" name = "surname" v-model="formData.surname" class="form-control">
             </div>
-            <div class="form-group">
-                <label for="age">Yaşınız:</label>
-                <input type="number" id="age" name = "age" v-model="formData.age" class="form-control">
-            </div>
 
             <div class="form-group">
-                <label>Gender:</label>
+                <label>Cinsiyet:</label>
                 <div class="form-check">
-                    <input type="radio" id="erkek" name="gender" value="e" v-model="formData.gender"
+                    <input type="radio" id="erkek" name="gender" value="erkek" v-model="formData.gender"
                         class="form-check-input">
                     <label for="erkek" class="form-check-label">Erkek</label>
                 </div>
 
                 <div class="form-check">
-                    <input type="radio" id="kadin" name="gender" value="k" v-model="formData.gender"
+                    <input type="radio" id="kadin" name="gender" value="kadın" v-model="formData.gender"
                         class="form-check-input">
                     <label for="kadin" class="form-check-label">Kadın</label>
                 </div>
 
                 <div class="form-check">
-                    <input type="radio" id="diger" name="gender" value="d" v-model="formData.gender"
+                    <input type="radio" id="diger" name="gender" value="diğer" v-model="formData.gender"
                         class="form-check-input">
                     <label for="diger" class="form-check-label">Diğer</label>
                 </div>
 
                 <div class="form-check">
-                    <input type="radio" id="nogender" name="gender" value="n" v-model="formData.gender"
+                    <input type="radio" id="nogender" name="gender" value="non-gender" v-model="formData.gender"
                         class="form-check-input">
                     <label for="nogender" class="form-check-label">Belirtmek istemiyorum</label>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label for="age">Yaş: </label>
+                <br>
+                <input type="range" id="age" name = "age" v-model="formData.age" min="0" max="100" value="25" oninput="ageOutput.value = this.value">
+                <output id="ageOutput"></output>
+            </div>
+
+            <label for="text">Eğitim durumu:</label>
+            <div class="edu">
+                <input type="text" id="education" name="education" v-model = "formData.education" list="Eğitim" placeholder="Eğitim Durumunuz" >
+                <datalist id="Eğitim">
+
+                <option name="1" value="Yok">0</option>
+                <option name="2" value="İlkokul">1' den 4' e kadar</option>
+                <option name="3" value="Ortaokul">5' den 8' e kadar</option>
+                <option name="4" value="Lise">9' dan 12' e kadar</option>
+                <option name="5" value="Üniversite">Önlisans</option>
+                <option name="6" value="Üniversite">Lisans</option>
+                <option name="8" value="Üniversite">YükeskLisans</option>
+
+            </datalist>
+            </div>
+            <br>
+                <fieldset>
+                    <legend>Bilinen Yazılım Dilleri</legend>
+                
+                    <label>
+                        <input type="checkbox" name="languages[]" value="JavaScript" v-model="formData.languages.JavaScript">
+                        JavaScript
+                    </label><br>
+                    
+                    <label>
+                        <input type="checkbox" name="languages[]" value="Python" v-model="formData.languages.Python">
+                        Python
+                    </label><br>
+                    
+                    <label>
+                        <input type="checkbox" name="languages[]" value="Java" v-model="formData.languages.Java">
+                        Java
+                    </label><br>
+                    
+                    <label>
+                        <input type="checkbox" name="languages[]" value="C#" v-model="formData.languages.Csharp">
+                        C#
+                    </label><br>
+
+                    <label>
+                        <input type="checkbox" name="languages[]" value="C++" v-model="formData.languages.Cpp">
+                        C++
+                    </label><br>
+
+                    <label>
+                        <input type="checkbox" name="languages[]" value="C" v-model="formData.languages.C">
+                        C
+                    </label><br>
+                    
+                    <label>
+                        <input type="checkbox" name="languages[]" value="PHP" v-model="formData.languages.Php">
+                        PHP
+                    </label><br>
+                </fieldset> 
 
             <div class="form-group">
                 <label for="text">E-posta:</label>
@@ -94,7 +152,8 @@
                 <textarea id="message" name = "message" v-model="formData.message" class="form-control"></textarea>
             </div>
             <div>
-                <button type="submit" @click="submitForm" class="btn btn-primary">Gönder</button>
+                <button type="submit" @click="submitForm" class="btn btn-primary">Gönder(vue)</button>
+                <button type="button" @click = "submitForm"  class="btn btn-primary">Gönder(js)</button>
                 <button type="button" @click="resetForm" class="btn btn-secondary">Temizle</button>
             </div>
         </form>
@@ -103,7 +162,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="script/controll.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ageInput = document.getElementById('age');
+            const ageOutput = document.getElementById('ageOutput');
 
+            // Sayfa yüklendiğinde kaydırıcının varsayılan değeri output elemanına yazdırılır
+            ageOutput.value = ageInput.value;
+
+            // Kaydırıcı her hareket ettirildiğinde output güncellenir
+            ageInput.addEventListener('input', function() {
+                ageOutput.value = ageInput.value;
+            });
+        });
+    </script>
 </body>
-
 </html>
