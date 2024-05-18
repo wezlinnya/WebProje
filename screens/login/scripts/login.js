@@ -25,15 +25,6 @@ function redirect() {
     window.open("../about/about.html");
 }
 
-
-
-
-
-
-
-
-
-
 new Vue({
     el: '#app',
     data: {
