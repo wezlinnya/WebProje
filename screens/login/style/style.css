@@ -1,6 +1,0 @@
-body {
-    background-size: cover;
-    background-repeat: no-repeat; /* Arka plan resminin tekrarlanmasını engeller */
-    display: flex;
-    background-image: url('/images/aksaraylogin.jpg');
-}
