@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function redirect() {
-        //formData.name = document.getElementById('name').value;
+        formData.name = document.getElementById('name').value;
         formData.surname = document.getElementById('surname').value;
         formData.email = document.getElementById('email').value;
         formData.age = document.getElementById('age').value;
@@ -183,7 +183,7 @@ new Vue({
         },
         redirect() {
             const formData = {
-                //name: document.getElementById('name').value,
+                name: document.getElementById('name').value,
                 surname: document.getElementById('surname').value,
                 email: document.getElementById('email').value,
                 age: document.getElementById('age').value,

@@ -64,19 +64,50 @@
                 
                 Kısacası, oyun oynamak, dizi/film izlemek ve maç izlemek benim için sadece hobiler değil, aynı zamanda tutkularım. Bu aktivitelerle zaman geçirmek, beni mutlu ediyor ve hayatımda önemli bir yer tutuyor.</p>
         </div>
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Günün Sözü</h5>
-                <p class="card-text" id="quoteContent"></p>
-                <p class="card-text" id="quoteAuthor"></p>
-                <p class="card-text" id="quoteTags"></p>
-            </div>
-        </div>
-    </div><br>
-    <footer>
-        <br>
-    </footer>
+        <head>
+            <meta charset=”UTF-8">
+            <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
+            <title>Movies Explorer</title>
+         </head>
+         <body>
+           <!--cards for movie list-->
+
+           
+             <div class="row" id="appendData"></div>
+           </div>
+           <script src=”api.js”></script>
+         </body>
+         <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="movieModalLabel">Movie Title (Release Year)</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="movieModalLabel">Movie Title (Release Year)</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <img src="" alt="Movie Poster" id="modalPoster" class="img-fluid">
+                            </div>
+                            <div class="col-md-8">
+                              <p><strong>Release Date:</strong> <span id="modalReleaseDate"></span></p>
+                              <p><strong>Runtime:</strong> <span id="modalRuntime"></span></p>
+                              <p><strong>Overview:</strong> <span id="modalOverview"></span></p>
+                              <p><strong>Vote Average:</strong> <span id="modalVoteAverage"></span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
