@@ -7,19 +7,6 @@
     <title>İlgi Alanlarım</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .jumbotron {
-            background-color: #e9ecef;
-        }
-
-        .poem-card {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 200;">
     <a class="navbar-brand" href="#" style="padding-left: 10px;">Serhat Har</a>
@@ -51,63 +38,19 @@
     </div>
 </nav>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trending Movies and TV Shows</title>
+  <link rel="stylesheet" href="script/style.css">
+</head>
+
 <body>
+  <h1>Popüler Dizi ve Filmler</h1>
+  <div id="movies"></div>
 
-    <div class="container mt-5">
-        <div class="jumbotron">
-            <h1 class="display-4">Merhaba!</h1>
-            <p class="lead"> Merhaba! Benim adım Serhat, ve biraz kendimden bahsetmek istiyorum. Hayatta en çok keyif aldığım şeylerin başında oyun oynamak geliyor. Oyun dünyasında kendimi kaybetmek benim için gerçek bir zevk. Özellikle de Cyberpunk 2077 gibi derin ve etkileyici oyunlar beni bambaşka bir dünyaya götürüyor. Oyun oynamak benim için sadece eğlenceli bir aktivite değil, aynı zamanda hayal gücümü ve problem çözme yeteneklerimi geliştirmenin bir yolu.
-
-                Ayrıca dizi ve film izlemeyi de çok seviyorum. Favori dizim kesinlikle Breaking Bad. Bu dizi, sıradışı hikayesi ve karakter derinliğiyle beni adeta ekran başına kilitlemeyi başarıyor. Her bölümü heyecanla izler, her sahnesinde ayrı ayrı etkilenirim. Film dünyasında ise Star Wars serisi benim için efsanevi bir yerde. Bu serinin muhteşem evreni, epik hikayesi ve unutulmaz karakterleri beni her zaman büyülemiştir.
-                
-                Spor tutkum da oldukça güçlü. Fenerbahçe'yi tutuyorum ve bu takımın renklerine olan bağlılığım hiç sarsılmaz. Ayrıca futbolun efsanevi isimlerinden Lionel Messi'nin hayranıyım. Onun saha içindeki ustalığı ve futbol zekası beni her zaman etkilemiştir. Bir Messi hayranı olarak, onun kariyerini takip etmek ve maçlarını izlemek benim için gerçek bir keyif kaynağı.
-                
-                Kısacası, oyun oynamak, dizi/film izlemek ve maç izlemek benim için sadece hobiler değil, aynı zamanda tutkularım. Bu aktivitelerle zaman geçirmek, beni mutlu ediyor ve hayatımda önemli bir yer tutuyor.</p>
-        </div>
-        <head>
-            <meta charset=”UTF-8">
-            <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
-            <title>Movies Explorer</title>
-         </head>
-         <body>
-           <!--cards for movie list-->
-
-           
-             <div class="row" id="appendData"></div>
-           </div>
-           <script src=”api.js”></script>
-         </body>
-         <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="movieModalLabel">Movie Title (Release Year)</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="movieModalLabel">Movie Title (Release Year)</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="row">
-                            <div class="col-md-4">
-                              <img src="" alt="Movie Poster" id="modalPoster" class="img-fluid">
-                            </div>
-                            <div class="col-md-8">
-                              <p><strong>Release Date:</strong> <span id="modalReleaseDate"></span></p>
-                              <p><strong>Runtime:</strong> <span id="modalRuntime"></span></p>
-                              <p><strong>Overview:</strong> <span id="modalOverview"></span></p>
-                              <p><strong>Vote Average:</strong> <span id="modalVoteAverage"></span></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+  <script src="script/script.js"></script>
+</body>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

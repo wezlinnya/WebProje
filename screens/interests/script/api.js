@@ -15,19 +15,16 @@ axios.get('https://api.quotable.io/random')
         console.error(error);
     });
 
-var data = null;
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
+   const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5Y2VkYzFhYmJkNDkyMThkNDNlYWU1NGQ2ZDUxOTkzZSIsInN1YiI6IjY2NDY4MzRlZTJlYTA3NDNhNDFjYzNiOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Zc2PRRzwO0oeR0Wdm6_WY_HKrDp8WKcdj5fVhjHHENo'
   }
-});
+};
 
-xhr.open("GET", "https://api.collectapi.com/imdb/imdbSearchById?movieId=tt1375666");
-xhr.setRequestHeader("content-type", "application/json");
-xhr.setRequestHeader("authorization", "apikey your_token");
-
-xhr.send(data);
+fetch('https://api.themoviedb.org/3/authentication', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
