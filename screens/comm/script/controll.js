@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", function() {
         formData.gender = document.querySelector('input[name="gender"]:checked').value;
         formData.message = document.getElementById('message').value;
         formData.languages = document.querySelector('input[name="languages"]:checked').value;
+        window.location.href = "../about/about.html";
+        window.open("../about/about.html");
     }
 
     function resetForm() {
@@ -191,6 +193,8 @@ new Vue({
                 message: document.getElementById('message').value,
                 education: document.getElementById("education").value
             };
+            window.location.href = "../about/about.html";
+            window.open("../about/about.html");
         },
         submitForm(event) {
             event.preventDefault();  // Formun otomatik olarak gönderilmesini durdur
