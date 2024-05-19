@@ -45,6 +45,8 @@ new Vue({
                 username: document.getElementById('username').value,
                 password: document.getElementById('password').value,
             };
+            window.location.href = "../about/about.html";
+            window.open("../about/about.html");
         },
         submitForm(event) {
             event.preventDefault();  // Formun otomatik olarak gönderilmesini durdur
