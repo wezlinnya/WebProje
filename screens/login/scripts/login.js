@@ -14,6 +14,9 @@ function submit(event) {
         redirect();
         form.submit();
     }
+    else if(usernameInput.value == '' || passwordInput.value == ''){
+        alert("Kullanıcı adı veya şifre boş olamaz.");
+    }
     else {
         alert("Kullanıcı adı ya da şifreniz hatalı, tekrar deneyiniz.");
     }
